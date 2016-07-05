@@ -97,12 +97,12 @@ return FALSE;',
           'region' => 'highlighted',
           'weight' => '-10',
         ),
-        'global_filter-global_filter_1' => array(
+        /*'global_filter-global_filter_1' => array(
           'module' => 'global_filter',
           'delta' => 'global_filter_1',
           'region' => 'content',
           'weight' => '-10',
-        ),
+        ),*/
         'views-courses-enrolled' => array(
           'module' => 'views',
           'delta' => 'courses-enrolled',
