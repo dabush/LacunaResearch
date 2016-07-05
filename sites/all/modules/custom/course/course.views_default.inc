@@ -184,7 +184,7 @@ function course_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'No courses.';
+  $handler->display->display_options['empty']['area']['content'] = 'No studies.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   /* Relationship: OG membership: OG membership from Node group */
   $handler->display->display_options['relationships']['og_membership_rel_group']['id'] = 'og_membership_rel_group';
@@ -331,7 +331,7 @@ function course_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'No courses.';
+  $handler->display->display_options['empty']['area']['content'] = 'No studies.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
 
   /* Display: Not Enrolled block */

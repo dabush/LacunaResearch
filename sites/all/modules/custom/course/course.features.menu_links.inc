@@ -52,26 +52,6 @@ function course_menu_default_menu_links() {
     'customized' => 1,
     'parent_identifier' => 'main-menu_account:<nolink>',
   );
-  // Exported menu link: menu-institutional-menu_courses:<front>.
-  $menu_links['menu-institutional-menu_courses:<front>'] = array(
-    'menu_name' => 'menu-institutional-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'Courses',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'menu-institutional-menu_courses:<front>',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-    'customized' => 1,
-  );
 
   // Translatables
   // Included for use with string extractors like potx.
