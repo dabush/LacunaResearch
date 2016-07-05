@@ -147,7 +147,7 @@ function lacuna_stories_menus_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -50,
     'customized' => 1,
   );
   // Exported menu link: menu-institutional-menu_log-in:user/login.
@@ -167,7 +167,7 @@ function lacuna_stories_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -48,
     'customized' => 1,
   );
   // Exported menu link: menu-institutional-menu_log-out:user/logout.
@@ -187,7 +187,7 @@ function lacuna_stories_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -47,
     'customized' => 1,
   );
   // Exported menu link: menu-institutional-menu_register:user/register.
@@ -207,7 +207,27 @@ function lacuna_stories_menus_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -46,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-institutional-menu_studies:<front>.
+  $menu_links['menu-institutional-menu_studies:<front>'] = array(
+    'menu_name' => 'menu-institutional-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Studies',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'menu-institutional-menu_studies:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
     'customized' => 1,
   );
 
@@ -223,6 +243,7 @@ function lacuna_stories_menus_menu_default_menu_links() {
   t('Log Out');
   t('Reflect');
   t('Register');
+  t('Studies');
 
   return $menu_links;
 }

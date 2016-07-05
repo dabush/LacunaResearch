@@ -25,6 +25,7 @@ features[menu_links][] = menu-institutional-menu_about:http://www.lacunastories.
 features[menu_links][] = menu-institutional-menu_log-in:user/login
 features[menu_links][] = menu-institutional-menu_log-out:user/logout
 features[menu_links][] = menu-institutional-menu_register:user/register
+features[menu_links][] = menu-institutional-menu_studies:<front>
 features[variable][] = superfish_arrow_1
 features[variable][] = superfish_menu_1
 features[variable][] = superfish_menu_2
