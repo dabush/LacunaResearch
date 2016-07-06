@@ -9,14 +9,22 @@
  */
 function lacuna_stories_people_default_rules_configuration() {
   $items = array();
-  $items['rules_automatically_assign_student_role'] = entity_import('rules_config', '{ "rules_automatically_assign_student_role" : {
-      "LABEL" : "Automatically Assign Student Role",
+  $items['lacuna_stories_irb_form_send_user_to_appropriate_survey'] = entity_import('rules_config', '{ "lacuna_stories_irb_form_send_user_to_appropriate_survey" : {
+      "LABEL" : "Send User to Appropriate Survey",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
-      "REQUIRES" : [ "rules" ],
-      "ON" : { "user_insert" : [] },
+      "REQUIRES" : [ "webform_rules", "rules" ],
+      "ON" : { "webform_rules_submit" : [] },
+      "IF" : [
+        { "webform_has_id" : {
+            "form_id" : [ "form_id" ],
+            "selected_webform" : { "value" : { "webform-client-form-1" : "webform-client-form-1" } }
+          }
+        }
+      ],
       "DO" : [
-        { "user_add_role" : { "account" : [ "account" ], "roles" : { "value" : { "7" : "7" } } } }
+        { "redirect" : { "url" : "demographic-survey" } },
+        { "drupal_message" : { "message" : "Welcome to Lacuna Stories. Please tell us about yourself by completing your profile." } }
       ]
     }
   }');
