@@ -190,26 +190,6 @@ function lacuna_stories_menus_menu_default_menu_links() {
     'weight' => -47,
     'customized' => 1,
   );
-  // Exported menu link: menu-institutional-menu_register:user/register.
-  $menu_links['menu-institutional-menu_register:user/register'] = array(
-    'menu_name' => 'menu-institutional-menu',
-    'link_path' => 'user/register',
-    'router_path' => 'user/register',
-    'link_title' => 'Register',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'menu-institutional-menu_register:user/register',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -46,
-    'customized' => 1,
-  );
   // Exported menu link: menu-institutional-menu_studies:<front>.
   $menu_links['menu-institutional-menu_studies:<front>'] = array(
     'menu_name' => 'menu-institutional-menu',
@@ -242,7 +222,6 @@ function lacuna_stories_menus_menu_default_menu_links() {
   t('Log In');
   t('Log Out');
   t('Reflect');
-  t('Register');
   t('Studies');
 
   return $menu_links;

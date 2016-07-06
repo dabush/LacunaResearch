@@ -22,11 +22,18 @@ function lacuna_stories_menus_menu_default_menu_custom() {
     'title' => 'Institutional Menu',
     'description' => 'Menu for institutional-level navigation',
   );
+  // Exported menu: menu-participant-menu.
+  $menus['menu-participant-menu'] = array(
+    'menu_name' => 'menu-participant-menu',
+    'title' => 'Participant Menu',
+    'description' => '',
+  );
   // Translatables
   // Included for use with string extractors like potx.
   t('Institutional Menu');
   t('Main menu');
   t('Menu for institutional-level navigation');
+  t('Participant Menu');
   t('The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.');
 
   return $menus;
