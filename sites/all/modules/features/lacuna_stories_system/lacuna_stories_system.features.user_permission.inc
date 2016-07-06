@@ -15,6 +15,7 @@ function lacuna_stories_system_user_default_permissions() {
     'name' => 'access content',
     'roles' => array(
       'Content Manager' => 'Content Manager',
+      'Participant' => 'Participant',
       'Researcher' => 'Researcher',
       'Site Administrator' => 'Site Administrator',
       'anonymous user' => 'anonymous user',
