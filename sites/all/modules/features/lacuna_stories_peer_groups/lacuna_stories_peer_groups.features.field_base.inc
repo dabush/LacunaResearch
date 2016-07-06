@@ -97,7 +97,7 @@ function lacuna_stories_peer_groups_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'og_user_node1',
     'field_permissions' => array(
-      'type' => 0,
+      'type' => 1,
     ),
     'indexes' => array(
       'target_id' => array(

@@ -266,7 +266,7 @@ This setting can be changed at any time.',
           'status' => TRUE,
         ),
       ),
-      'user_register_form' => 0,
+      'user_register_form' => 1,
     ),
     'view modes' => array(
       'full' => array(
