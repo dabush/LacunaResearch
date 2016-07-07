@@ -28,5 +28,19 @@ function lacuna_stories_people_default_rules_configuration() {
       ]
     }
   }');
+  $items['lacuna_stories_people_send_user_to_instructions'] = entity_import('rules_config', '{ "lacuna_stories_people_send_user_to_instructions" : {
+      "LABEL" : "Send User to Instructions",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "REQUIRES" : [ "rules", "php", "webform_rules" ],
+      "ON" : { "webform_rules_submit" : [] },
+      "IF" : [ { "text_matches" : { "text" : [ "node:title" ], "match" : "Survey" } } ],
+      "DO" : [
+        { "php_eval" : { "code" : "course_get_selected_course();" } },
+        { "redirect" : { "url" : "lacuna-instructions" } },
+        { "drupal_message" : { "message" : "Welcome to Lacuna Stories. Please tell us about yourself by completing your profile." } }
+      ]
+    }
+  }');
   return $items;
 }
