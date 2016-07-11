@@ -314,5 +314,241 @@ function research_study_views_default_views() {
   $handler->display->display_options['path'] = 'post-reading-survey';
   $export['demographic_survey'] = $view;
 
+  $view = new view();
+  $view->name = 'webform_view_for_researchers';
+  $view->description = 'An administrative list of webform nodes';
+  $view->tag = 'webform';
+  $view->base_table = 'webform';
+  $view->human_name = 'Webform View for Researchers';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Manage Surveys';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    3 => '3',
+    4 => '4',
+    5 => '5',
+    6 => '6',
+  );
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '25';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'created' => 'created',
+    'status' => 'status',
+    'webform_results' => 'webform_results',
+    'webform_results_2' => 'webform_results',
+    'webform_results_3' => 'webform_results',
+    'webform_results_4' => 'webform_results',
+    'edit_node' => 'edit_node',
+    'webform_edit' => 'edit_node',
+    'webform_results_1' => 'edit_node',
+  );
+  $handler->display->display_options['style_options']['default'] = 'created';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'created' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'status' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'webform_results' => array(
+      'align' => '',
+      'separator' => ' &nbsp; ',
+      'empty_column' => 0,
+    ),
+    'webform_results_2' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'webform_results_3' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'webform_results_4' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'edit_node' => array(
+      'align' => '',
+      'separator' => ' &nbsp; ',
+      'empty_column' => 0,
+    ),
+    'webform_edit' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'webform_results_1' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  /* Relationship: Webform: Node */
+  $handler->display->display_options['relationships']['nid']['id'] = 'nid';
+  $handler->display->display_options['relationships']['nid']['table'] = 'webform';
+  $handler->display->display_options['relationships']['nid']['field'] = 'nid';
+  $handler->display->display_options['relationships']['nid']['required'] = TRUE;
+  /* Relationship: Flags: demographic_survey_flag */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['relationship'] = 'nid';
+  $handler->display->display_options['relationships']['flag_content_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'demographic_survey_flag';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  /* Relationship: Flags: post_reading_survey */
+  $handler->display->display_options['relationships']['flag_content_rel_1']['id'] = 'flag_content_rel_1';
+  $handler->display->display_options['relationships']['flag_content_rel_1']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel_1']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel_1']['relationship'] = 'nid';
+  $handler->display->display_options['relationships']['flag_content_rel_1']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_content_rel_1']['flag'] = 'post_reading_survey';
+  $handler->display->display_options['relationships']['flag_content_rel_1']['user_scope'] = 'any';
+  /* Relationship: OG membership: OG membership from Node */
+  $handler->display->display_options['relationships']['og_membership_rel']['id'] = 'og_membership_rel';
+  $handler->display->display_options['relationships']['og_membership_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['og_membership_rel']['field'] = 'og_membership_rel';
+  $handler->display->display_options['relationships']['og_membership_rel']['relationship'] = 'nid';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'nid';
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['relationship'] = 'nid';
+  $handler->display->display_options['fields']['created']['label'] = 'Created';
+  $handler->display->display_options['fields']['created']['date_format'] = 'short';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Webform: Status */
+  $handler->display->display_options['fields']['status']['id'] = 'status';
+  $handler->display->display_options['fields']['status']['table'] = 'webform';
+  $handler->display->display_options['fields']['status']['field'] = 'status';
+  /* Field: Webform: Webform results link */
+  $handler->display->display_options['fields']['webform_results']['id'] = 'webform_results';
+  $handler->display->display_options['fields']['webform_results']['table'] = 'node';
+  $handler->display->display_options['fields']['webform_results']['field'] = 'webform_results';
+  $handler->display->display_options['fields']['webform_results']['relationship'] = 'nid';
+  $handler->display->display_options['fields']['webform_results']['label'] = 'View';
+  $handler->display->display_options['fields']['webform_results']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['webform_results']['text'] = 'Submissions';
+  /* Field: Webform: Webform results link */
+  $handler->display->display_options['fields']['webform_results_2']['id'] = 'webform_results_2';
+  $handler->display->display_options['fields']['webform_results_2']['table'] = 'node';
+  $handler->display->display_options['fields']['webform_results_2']['field'] = 'webform_results';
+  $handler->display->display_options['fields']['webform_results_2']['relationship'] = 'nid';
+  $handler->display->display_options['fields']['webform_results_2']['label'] = 'Analysis';
+  $handler->display->display_options['fields']['webform_results_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['webform_results_2']['text'] = 'Analysis';
+  $handler->display->display_options['fields']['webform_results_2']['subpath'] = 'analysis';
+  /* Field: Webform: Webform results link */
+  $handler->display->display_options['fields']['webform_results_3']['id'] = 'webform_results_3';
+  $handler->display->display_options['fields']['webform_results_3']['table'] = 'node';
+  $handler->display->display_options['fields']['webform_results_3']['field'] = 'webform_results';
+  $handler->display->display_options['fields']['webform_results_3']['relationship'] = 'nid';
+  $handler->display->display_options['fields']['webform_results_3']['label'] = 'Table';
+  $handler->display->display_options['fields']['webform_results_3']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['webform_results_3']['text'] = 'Table';
+  $handler->display->display_options['fields']['webform_results_3']['subpath'] = 'table';
+  /* Field: Webform: Webform results link */
+  $handler->display->display_options['fields']['webform_results_4']['id'] = 'webform_results_4';
+  $handler->display->display_options['fields']['webform_results_4']['table'] = 'node';
+  $handler->display->display_options['fields']['webform_results_4']['field'] = 'webform_results';
+  $handler->display->display_options['fields']['webform_results_4']['relationship'] = 'nid';
+  $handler->display->display_options['fields']['webform_results_4']['label'] = 'Download';
+  $handler->display->display_options['fields']['webform_results_4']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['webform_results_4']['text'] = 'Download';
+  $handler->display->display_options['fields']['webform_results_4']['subpath'] = 'download';
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['relationship'] = 'nid';
+  $handler->display->display_options['fields']['edit_node']['label'] = 'Operations';
+  $handler->display->display_options['fields']['edit_node']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['edit_node']['alter']['text'] = 'Edit';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  /* Field: Webform: Webform edit link */
+  $handler->display->display_options['fields']['webform_edit']['id'] = 'webform_edit';
+  $handler->display->display_options['fields']['webform_edit']['table'] = 'node';
+  $handler->display->display_options['fields']['webform_edit']['field'] = 'webform_edit';
+  $handler->display->display_options['fields']['webform_edit']['relationship'] = 'nid';
+  $handler->display->display_options['fields']['webform_edit']['label'] = 'Components';
+  $handler->display->display_options['fields']['webform_edit']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['webform_edit']['text'] = 'Components';
+  $handler->display->display_options['fields']['webform_edit']['subpath'] = 'components';
+  /* Field: Webform: Webform results link */
+  $handler->display->display_options['fields']['webform_results_1']['id'] = 'webform_results_1';
+  $handler->display->display_options['fields']['webform_results_1']['table'] = 'node';
+  $handler->display->display_options['fields']['webform_results_1']['field'] = 'webform_results';
+  $handler->display->display_options['fields']['webform_results_1']['relationship'] = 'nid';
+  $handler->display->display_options['fields']['webform_results_1']['label'] = 'Clear';
+  $handler->display->display_options['fields']['webform_results_1']['text'] = 'Clear';
+  $handler->display->display_options['fields']['webform_results_1']['subpath'] = 'clear';
+  /* Field: Flags: Flagged */
+  $handler->display->display_options['fields']['flagged']['id'] = 'flagged';
+  $handler->display->display_options['fields']['flagged']['table'] = 'flagging';
+  $handler->display->display_options['fields']['flagged']['field'] = 'flagged';
+  $handler->display->display_options['fields']['flagged']['relationship'] = 'flag_content_rel';
+  $handler->display->display_options['fields']['flagged']['label'] = 'Marked as Pre-reading Survey';
+  $handler->display->display_options['fields']['flagged']['type'] = 'unicode-yes-no';
+  $handler->display->display_options['fields']['flagged']['not'] = 0;
+  /* Field: Flags: Flagged */
+  $handler->display->display_options['fields']['flagged_1']['id'] = 'flagged_1';
+  $handler->display->display_options['fields']['flagged_1']['table'] = 'flagging';
+  $handler->display->display_options['fields']['flagged_1']['field'] = 'flagged';
+  $handler->display->display_options['fields']['flagged_1']['relationship'] = 'flag_content_rel_1';
+  $handler->display->display_options['fields']['flagged_1']['label'] = 'Marked as Post-reading Surve';
+  $handler->display->display_options['fields']['flagged_1']['type'] = 'unicode-yes-no';
+  $handler->display->display_options['fields']['flagged_1']['not'] = 0;
+  /* Field: Content: Groups audience */
+  $handler->display->display_options['fields']['og_group_ref']['id'] = 'og_group_ref';
+  $handler->display->display_options['fields']['og_group_ref']['table'] = 'og_membership';
+  $handler->display->display_options['fields']['og_group_ref']['field'] = 'og_group_ref';
+  $handler->display->display_options['fields']['og_group_ref']['relationship'] = 'nid';
+  $handler->display->display_options['fields']['og_group_ref']['settings'] = array(
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['og_group_ref']['delta_offset'] = '0';
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['path'] = 'manage-surveys';
+  $export['webform_view_for_researchers'] = $view;
+
   return $export;
 }

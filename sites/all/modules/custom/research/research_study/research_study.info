@@ -19,4 +19,5 @@ features[features_api][] = api:2
 features[flag][] = demographic_survey_flag
 features[flag][] = post_reading_survey
 features[views_view][] = demographic_survey
+features[views_view][] = webform_view_for_researchers
 project path = sites/all/modules/custom/research
