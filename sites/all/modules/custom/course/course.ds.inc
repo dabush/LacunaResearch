@@ -35,9 +35,6 @@ function course_ds_layout_settings_info() {
         8 => 'field_start_date',
         9 => 'field_end_date',
       ),
-      'footer' => array(
-        10 => 'group_group',
-      ),
     ),
     'fields' => array(
       'field_course_image' => 'header',
@@ -50,7 +47,6 @@ function course_ds_layout_settings_info() {
       'field_course_id' => 'right',
       'field_start_date' => 'right',
       'field_end_date' => 'right',
-      'group_group' => 'footer',
     ),
     'classes' => array(),
     'wrappers' => array(

@@ -13,7 +13,7 @@ function lacuna_stories_people_default_rules_configuration() {
       "LABEL" : "Send User to Appropriate Survey",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
-      "REQUIRES" : [ "webform_rules", "rules" ],
+      "REQUIRES" : [ "webform_rules", "rules", "php" ],
       "ON" : { "webform_rules_submit" : [] },
       "IF" : [
         { "webform_has_id" : {
@@ -24,7 +24,8 @@ function lacuna_stories_people_default_rules_configuration() {
       ],
       "DO" : [
         { "redirect" : { "url" : "demographic-survey" } },
-        { "drupal_message" : { "message" : "Welcome to Lacuna Stories. Please tell us about yourself by completing your profile." } }
+        { "drupal_message" : { "message" : "Welcome to Lacuna Stories. Please tell us about yourself by completing your profile." } },
+        { "php_eval" : { "code" : "course_get_selected_course();" } }
       ]
     }
   }');
@@ -37,8 +38,8 @@ function lacuna_stories_people_default_rules_configuration() {
       "IF" : [ { "text_matches" : { "text" : [ "node:title" ], "match" : "Survey" } } ],
       "DO" : [
         { "php_eval" : { "code" : "course_get_selected_course();" } },
-        { "redirect" : { "url" : "lacuna-instructions" } },
-        { "drupal_message" : { "message" : "Welcome to Lacuna Stories. Please tell us about yourself by completing your profile." } }
+        { "redirect" : { "url" : "\\u003Cfront\\u003E" } },
+        { "drupal_message" : { "message" : "Thank you for completing the survey. You may now proceed to the study by clicking on the appropriate icon below." } }
       ]
     }
   }');
