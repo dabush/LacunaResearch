@@ -17,12 +17,9 @@ function research_study_context_default_contexts() {
   $context->description = '';
   $context->tag = '';
   $context->conditions = array(
-    'node' => array(
+    'path' => array(
       'values' => array(
-        'course' => 'course',
-      ),
-      'options' => array(
-        'node_form' => '1',
+        'course/*' => 'course/*',
       ),
     ),
   );

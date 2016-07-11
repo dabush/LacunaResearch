@@ -59,6 +59,15 @@ if (course_get_selected_course()== $new_course) {
 return FALSE;',
       ),
     ),
+    'user' => array(
+      'values' => array(
+        'Content Manager' => 'Content Manager',
+        'Instructor' => 'Instructor',
+        'Researcher' => 'Researcher',
+        'Site Administrator' => 'Site Administrator',
+        'Student' => 'Student',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
@@ -130,11 +139,6 @@ return FALSE;',
     'path' => array(
       'values' => array(
         '<front>' => '<front>',
-      ),
-    ),
-    'user' => array(
-      'values' => array(
-        'anonymous user' => 'anonymous user',
       ),
     ),
   );
