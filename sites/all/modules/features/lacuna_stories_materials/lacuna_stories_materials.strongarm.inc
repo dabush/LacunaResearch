@@ -98,6 +98,9 @@ function lacuna_stories_materials_strongarm() {
         'path' => array(
           'weight' => '8',
         ),
+        'flag' => array(
+          'weight' => '4',
+        ),
       ),
       'display' => array(),
     ),

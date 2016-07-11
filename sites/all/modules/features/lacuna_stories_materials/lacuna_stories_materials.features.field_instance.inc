@@ -127,7 +127,7 @@ function lacuna_stories_materials_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -209,7 +209,7 @@ function lacuna_stories_materials_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -270,7 +270,7 @@ function lacuna_stories_materials_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -326,7 +326,7 @@ function lacuna_stories_materials_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 

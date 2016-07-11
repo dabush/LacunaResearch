@@ -90,9 +90,10 @@ function lacuna_stories_materials_field_group_info() {
     'children' => array(
       0 => 'field_doc_attachment',
       1 => 'field_doc_text',
-      2 => 'field_media',
-      3 => 'field_image',
-      4 => 'title',
+      2 => 'field_image',
+      3 => 'field_media',
+      4 => 'flag',
+      5 => 'title',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

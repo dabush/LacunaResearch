@@ -36,10 +36,10 @@ function lacuna_stories_materials_flag_default_flags() {
     'types' => array(
       0 => 'document',
     ),
-    'flag_short' => 'Flag this item',
+    'flag_short' => 'This item is the primary reading for this study',
     'flag_long' => '',
     'flag_message' => '',
-    'unflag_short' => 'Unflag this item',
+    'unflag_short' => 'This item is not the primary reading for this study',
     'unflag_long' => '',
     'unflag_message' => '',
     'unflag_denied_text' => '',
@@ -60,11 +60,11 @@ function lacuna_stories_materials_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'lacuna_stories_materials',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 
