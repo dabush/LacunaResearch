@@ -91,18 +91,12 @@ return FALSE;',
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'block-1' => array(
-          'module' => 'block',
-          'delta' => '1',
+        'lacuna_stories-front_page_banner' => array(
+          'module' => 'lacuna_stories',
+          'delta' => 'front_page_banner',
           'region' => 'highlighted',
           'weight' => '-10',
         ),
-        /*'global_filter-global_filter_1' => array(
-          'module' => 'global_filter',
-          'delta' => 'global_filter_1',
-          'region' => 'content',
-          'weight' => '-10',
-        ),*/
         'views-courses-enrolled' => array(
           'module' => 'views',
           'delta' => 'courses-enrolled',
