@@ -1,0 +1,13 @@
+name = Research Study
+description = Features related to using Lacuna for research
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = ds
+dependencies[] = features
+dependencies[] = menu
+features[ctools][] = ds:ds:1
+features[ds_layout_settings][] = node|webform|default
+features[features_api][] = api:2
+features[menu_custom][] = devel
+project path = sites/all/modules/custom/research
