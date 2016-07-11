@@ -38,6 +38,7 @@ dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views
 dependencies[] = views_fluid_grid
+features[context][] = add_instructions_link_study
 features[context][] = course_context
 features[context][] = frontpage
 features[context][] = institutional_context
