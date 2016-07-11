@@ -33,9 +33,16 @@ function lacuna_stories_people_default_rules_configuration() {
       "LABEL" : "Send User to Instructions",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
-      "REQUIRES" : [ "rules", "php", "webform_rules" ],
+      "REQUIRES" : [ "flag", "php", "rules", "webform_rules" ],
       "ON" : { "webform_rules_submit" : [] },
-      "IF" : [ { "text_matches" : { "text" : [ "node:title" ], "match" : "Survey" } } ],
+      "IF" : [
+        { "flag_flagged_node" : {
+            "flag" : "demographic_survey_flag",
+            "node" : [ "node" ],
+            "flagging_user" : [ "user" ]
+          }
+        }
+      ],
       "DO" : [
         { "php_eval" : { "code" : "course_get_selected_course();" } },
         { "redirect" : { "url" : "\\u003Cfront\\u003E" } },
