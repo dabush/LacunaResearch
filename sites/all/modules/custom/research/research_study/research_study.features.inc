@@ -122,7 +122,7 @@ function research_study_node_info() {
       'description' => t('Instructions that can be configured to display differently to different cohorts, participants, etc.'),
       'has_title' => '1',
       'title_label' => t('Title'),
-      'help' => t('When choosing a title for these instructions, consider that participants will see it, and you might not want them to be able to deduce from the title what cohort they are in, or that they are even part of a cohort.'),
+      'help' => t('This title will not be visible to participants, so you can name the instructions in a way that makes it clear which cohort they are intended for.'),
     ),
   );
   drupal_alter('node_info', $items);
