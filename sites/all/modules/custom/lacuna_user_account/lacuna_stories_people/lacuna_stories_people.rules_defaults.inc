@@ -20,7 +20,8 @@ function lacuna_stories_people_default_rules_configuration() {
             "form_id" : [ "form_id" ],
             "selected_webform" : { "value" : { "webform-client-form-1" : "webform-client-form-1" } }
           }
-        }
+        },
+        { "user_has_role" : { "account" : [ "user" ], "roles" : { "value" : { "8" : "8" } } } }
       ],
       "DO" : [
         { "redirect" : { "url" : "demographic-survey" } },
