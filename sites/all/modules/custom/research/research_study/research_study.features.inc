@@ -110,3 +110,21 @@ function research_study_flag_default_flags() {
   return $flags;
 
 }
+
+/**
+ * Implements hook_node_info().
+ */
+function research_study_node_info() {
+  $items = array(
+    'cohort_instructions' => array(
+      'name' => t('Cohort Instructions'),
+      'base' => 'node_content',
+      'description' => t('Instructions that can be configured to display differently to different cohorts, participants, etc.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => t('When choosing a title for these instructions, consider that participants will see it, and you might not want them to be able to deduce from the title what cohort they are in, or that they are even part of a cohort.'),
+    ),
+  );
+  drupal_alter('node_info', $items);
+  return $items;
+}
