@@ -36,5 +36,30 @@ function research_study_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_flag_user_after_post_reading_survey'] = entity_import('rules_config', '{ "rules_flag_user_after_post_reading_survey" : {
+      "LABEL" : "Flag User After Post-reading Survey",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "REQUIRES" : [ "flag", "webform_rules" ],
+      "ON" : { "webform_rules_submit" : [] },
+      "IF" : [
+        { "flag_flagged_node" : {
+            "flag" : "post_reading_survey",
+            "node" : [ "node" ],
+            "flagging_user" : [ "user" ]
+          }
+        }
+      ],
+      "DO" : [
+        { "flag_flaguser" : {
+            "flag" : "user_has_completed_post_reading_",
+            "user" : [ "user" ],
+            "flagging_user" : [ "user" ],
+            "permission_check" : "1"
+          }
+        }
+      ]
+    }
+  }');
   return $items;
 }

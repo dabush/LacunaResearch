@@ -107,6 +107,37 @@ function research_study_flag_default_flags() {
     ),
     'api_version' => 3,
   );
+  // Exported flag: "User Has Completed Post-Reading Survey".
+  $flags['user_has_completed_post_reading_'] = array(
+    'entity_type' => 'user',
+    'title' => 'User Has Completed Post-Reading Survey',
+    'global' => 1,
+    'types' => array(),
+    'flag_short' => 'User has completed post-reading survey',
+    'flag_long' => '',
+    'flag_message' => '',
+    'unflag_short' => 'User has not completed post-reading survey',
+    'unflag_long' => '',
+    'unflag_message' => '',
+    'unflag_denied_text' => '',
+    'link_type' => 'toggle',
+    'weight' => 0,
+    'show_in_links' => array(
+      'full' => 0,
+      'token' => 0,
+    ),
+    'show_as_field' => 0,
+    'show_on_form' => 1,
+    'access_author' => '',
+    'show_contextual_link' => 0,
+    'show_on_profile' => 0,
+    'access_uid' => '',
+    'api_version' => 3,
+    'module' => 'research_study',
+    'locked' => array(
+      0 => 'name',
+    ),
+  );
   return $flags;
 
 }
