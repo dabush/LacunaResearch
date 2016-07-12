@@ -61,5 +61,24 @@ function research_study_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_prompt_user_to_logout'] = entity_import('rules_config', '{ "rules_prompt_user_to_logout" : {
+      "LABEL" : "Prompt User to Logout",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "REQUIRES" : [ "flag", "rules", "webform_rules" ],
+      "ON" : { "webform_rules_submit" : [] },
+      "IF" : [
+        { "flag_flagged_node" : {
+            "flag" : "post_reading_survey",
+            "node" : [ "node" ],
+            "flagging_user" : [ "user" ]
+          }
+        }
+      ],
+      "DO" : [
+        { "drupal_message" : { "message" : "Thank you for participating in our study. You may log out \\u003Ca href=\\u0022user\\/logout\\u0022\\u003EHere\\u003C\\/a\\u003E" } }
+      ]
+    }
+  }');
   return $items;
 }
