@@ -25,7 +25,7 @@ function lacuna_stories_people_default_rules_configuration() {
       ],
       "DO" : [
         { "redirect" : { "url" : "demographic-survey" } },
-        { "drupal_message" : { "message" : "Welcome to Lacuna Stories. Please tell us about yourself by completing your profile." } },
+        { "drupal_message" : { "message" : "Thank you for agreeing to the study. Please fill out the following information about yourself before continuing. When you are done, click Submit." } },
         { "php_eval" : { "code" : "course_get_selected_course();" } }
       ]
     }
