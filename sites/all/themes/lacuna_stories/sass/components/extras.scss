@@ -372,6 +372,8 @@ body {
       margin-left: 10%;
       margin-right: 20%;
       border-bottom: 1px dotted #d1d5d3;
+      margin-top: 10%;
+      padding-bottom: 5%;
         .field-items {
           float: right;
         }
@@ -383,6 +385,9 @@ body {
         .field-items {
           float: right;
         }
+    }
+    a#instructions-button.lacuna-button {
+      margin-left: 2.8%;
     }
 }
 
