@@ -324,7 +324,6 @@ function course_views_default_views() {
   /* Display: Enrolled block */
   $handler = $view->new_display('block', 'Enrolled block', 'enrolled');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Enrolled';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
