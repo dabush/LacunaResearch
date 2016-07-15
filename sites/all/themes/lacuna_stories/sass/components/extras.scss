@@ -4,6 +4,11 @@
     top: -100px;
 }
 
+/*hide course title in Research mode*/
+span#course-name {
+  display: none !important;
+}
+
 /*views fluid grid styling for enrolled courses view*/
 .views-fluid-grid-item {
 	background-color: #fafafa !important;
