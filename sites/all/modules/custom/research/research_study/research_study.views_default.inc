@@ -408,7 +408,7 @@ function research_study_views_default_views() {
   /* Display: Readings */
   $handler = $view->new_display('page', 'Readings', 'page_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Readings';
+  $handler->display->display_options['title'] = 'Instructions for this Text';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
