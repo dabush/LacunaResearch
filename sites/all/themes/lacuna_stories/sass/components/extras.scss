@@ -9,6 +9,15 @@ span#course-name {
   display: none !important;
 }
 
+/*hide webform confirmation of submission message*/
+body.page-node-done div.links {
+  display: none;
+}
+
+div.webform-confirmation {
+  display: none;
+}
+
 /*views fluid grid styling for enrolled courses view*/
 .views-fluid-grid-item {
 	background-color: #fafafa !important;
