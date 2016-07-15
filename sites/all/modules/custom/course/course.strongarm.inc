@@ -168,7 +168,6 @@ function course_strongarm() {
     'rss' => 0,
     'search_index' => 0,
     'search_result' => 0,
-    'diff_standard' => 0,
     'token' => 0,
     'workflow_tab' => 0,
     'revision' => 0,

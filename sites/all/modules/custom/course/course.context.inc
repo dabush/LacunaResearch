@@ -100,23 +100,11 @@ return FALSE;',
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'lacuna_stories-front_page_banner' => array(
-          'module' => 'lacuna_stories',
-          'delta' => 'front_page_banner',
-          'region' => 'highlighted',
-          'weight' => '-10',
-        ),
         'views-courses-enrolled' => array(
           'module' => 'views',
           'delta' => 'courses-enrolled',
           'region' => 'content',
           'weight' => '-9',
-        ),
-        'views-courses-not_enrolled' => array(
-          'module' => 'views',
-          'delta' => 'courses-not_enrolled',
-          'region' => 'content',
-          'weight' => '-8',
         ),
       ),
     ),
