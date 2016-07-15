@@ -36,6 +36,7 @@ features[menu_links][] = main-menu_manage-cohort-instructions:manage-cohort-inst
 features[menu_links][] = main-menu_manage-surveys:manage-surveys
 features[node][] = cohort_instructions
 features[rules_config][] = lacuna_stories_irb_form_send_user_to_study
+features[rules_config][] = rules_block_accounts_of_users_who_have_completed_survey
 features[rules_config][] = rules_flag_user_after_post_reading_survey
 features[rules_config][] = rules_prompt_user_to_logout
 features[variable][] = comment_anonymous_cohort_instructions

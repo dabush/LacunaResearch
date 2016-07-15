@@ -36,6 +36,24 @@ function research_study_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_block_accounts_of_users_who_have_completed_survey'] = entity_import('rules_config', '{ "rules_block_accounts_of_users_who_have_completed_survey" : {
+      "LABEL" : "Block Accounts of Users Who Have Completed Survey",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "REQUIRES" : [ "rules", "flag" ],
+      "ON" : { "user_logout" : [] },
+      "IF" : [
+        { "user_has_role" : { "account" : [ "account" ], "roles" : { "value" : { "8" : "8" } } } },
+        { "flag_flagged_user" : {
+            "flag" : "user_has_completed_post_reading_",
+            "user" : [ "account" ],
+            "flagging_user" : [ "account" ]
+          }
+        }
+      ],
+      "DO" : [ { "user_block" : { "account" : [ "account" ] } } ]
+    }
+  }');
   $items['rules_flag_user_after_post_reading_survey'] = entity_import('rules_config', '{ "rules_flag_user_after_post_reading_survey" : {
       "LABEL" : "Flag User After Post-reading Survey",
       "PLUGIN" : "reaction rule",
