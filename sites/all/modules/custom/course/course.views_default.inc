@@ -244,6 +244,7 @@ function course_views_default_views() {
   $handler->display->display_options['fields']['field_course_year']['table'] = 'field_data_field_course_year';
   $handler->display->display_options['fields']['field_course_year']['field'] = 'field_course_year';
   $handler->display->display_options['fields']['field_course_year']['label'] = '';
+  $handler->display->display_options['fields']['field_course_year']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_course_year']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_course_year']['alter']['text'] = '[field_course_term], [field_course_year]';
   $handler->display->display_options['fields']['field_course_year']['element_label_colon'] = FALSE;
@@ -259,7 +260,7 @@ function course_views_default_views() {
   $handler->display->display_options['fields']['field_name']['field'] = 'field_name';
   $handler->display->display_options['fields']['field_name']['label'] = '';
   $handler->display->display_options['fields']['field_name']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_name']['alter']['text'] = 'Taught by: [field_name]';
+  $handler->display->display_options['fields']['field_name']['alter']['text'] = 'Research Coordinator: [field_name]';
   $handler->display->display_options['fields']['field_name']['element_label_colon'] = FALSE;
   /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
