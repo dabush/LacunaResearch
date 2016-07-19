@@ -190,7 +190,11 @@ function annotator_check_annotatable_node () {
  */
 function annotator_page_alter(&$page) {
 	// Add the sidebar region for the Annotation Filters
-	if (annotator_check_annotatable_node()) {
+  // but limit only to admin users
+  global $user;
+  $filter_rids = variable_get('annotator_filters'); // Set in the admin form
+  $user_rids = array_keys($user->roles);
+	if (annotator_check_annotatable_node() && (count(array_intersect($filter_rids, $user_rids)) > 0)) {
 		$page['sidebar_second'] = array(
 			'#markup' => '<span></span>'
 		);
