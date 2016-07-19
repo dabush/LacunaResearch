@@ -18,6 +18,7 @@ class FiltersAnnotatorPlugin extends AnnotatorPlugin {
   }
 
   public function setup() {
+    global $user;
     $settings = $this->settings();
     // TODO: check for existing Filters block
     // If not present, create it? (or maybe too many hits every time?)
