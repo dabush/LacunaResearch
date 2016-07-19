@@ -5,6 +5,13 @@
  */
 function annotator_admin() {
   $form = $plugin_options = array();
+  $form['annotator_filters'] = array(
+    '#type' => 'checkboxes',
+    '#title' => t('Annotation Filters Access'),
+    '#description' => t('The user roles that should see Annotation Filters'),
+    '#options' => user_roles(TRUE),
+    '#default_value' => variable_get('annotator_filters', array()),
+  );
   $form['annotator_element'] = array(
     '#type' => 'textfield',
     '#title' => t('Annotator element'),

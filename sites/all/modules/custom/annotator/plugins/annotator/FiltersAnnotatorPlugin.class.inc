@@ -24,6 +24,11 @@ class FiltersAnnotatorPlugin extends AnnotatorPlugin {
     drupal_add_js(array('annotator_filters' => (array) $settings), 'setting');
     drupal_add_library('system', 'ui.autocomplete', TRUE);
     drupal_add_css('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', $type='external');
+    $filter_rids = variable_get('annotator_filters'); // Set in the admin form
+    $user_rids = array_keys($user->roles);
+    if (count(array_intersect($filter_rids, $user_rids)) == 0) {
+      return; // No access, don't enable
+    }
     drupal_add_js(drupal_get_path('module', 'annotator') . '/js/annotator_filters.js');
     drupal_add_js(drupal_get_path('module', 'annotator') . '/js/filters.js');
   }

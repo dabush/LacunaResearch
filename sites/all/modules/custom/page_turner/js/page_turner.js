@@ -31,6 +31,7 @@
  *
  ******/
 
+(function ($) {
 /**
  * Page Turner Model
  * Handles turning HTML into pages
@@ -619,7 +620,6 @@ PTController.prototype = {
     }
 }; // END: PTController
 
-(function ($) {
     "use strict";
     Drupal.behaviors.page_turner = {
         attach: function (context, settings) {
